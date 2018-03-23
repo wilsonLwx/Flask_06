@@ -14,5 +14,14 @@
         {{ message }}
     {% endfor %}
 </form>
+<hr>
+<form method="POST">
+    {{ form.csrf_token() }}
+    {{ form.username.label }}{{ form.username }}<br>
+    {{ form.password.label }}{{ form.password }}<br>
+    {{ form.password2.label }}{{ form.password2 }}<br>
+    {{ form.submit }}<br>
+</form>
+
 </body>
 </html>

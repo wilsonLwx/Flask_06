@@ -10,8 +10,7 @@ app = Flask(__name__)
 # 当登录成功之后，返回 errcode = 0
 @app.route('/login', methods=['POST'])
 def index():
-
-    username    = request.form.get('username')
+    username = request.form.get('username')
     password = request.form.get('password')
 
     # 判断参数是否为空

@@ -14,6 +14,10 @@ app.debug = True
 manager = Manager(app)
 db = SQLAlchemy(app)
 
+migrate = Migrate(app, db)
+
+manager.add_command('db', MigrateCommand)
+
 
 class Role(db.Model):
     __tablename__ = 't_roles'
